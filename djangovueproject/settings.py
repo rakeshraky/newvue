@@ -34,12 +34,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # URL where static files will be served
 STATIC_URL = '/static/'
 
-# Vue project location
-FRONTEND_DIR = os.path.join(BASE_DIR, 'frontend')
 
 # Vue assets directory (assetsDir)
 STATICFILES_DIRS = [
-    os.path.join(FRONTEND_DIR, 'dist/static'),
+    os.path.join(BASE_DIR, 'static'),
 ]
 
 # Webpack output location containing Vue index.html file (outputDir)
@@ -47,7 +45,6 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(FRONTEND_DIR, 'dist'),
         ],
         # Other TEMPLATE keys omitted for brevity
     },

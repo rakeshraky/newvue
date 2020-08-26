@@ -40,18 +40,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
-# Webpack output location containing Vue index.html file (outputDir)
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-        ],
-           'APP_DIRS': True,
-        # Other TEMPLATE keys omitted for brevity
-    },
-]
 
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -79,6 +68,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
